@@ -1,0 +1,16 @@
+
+<div class="latest_recipe">
+    <%if(matchingRecipes.length > 0){%>
+    <% matchingRecipes.forEach((recipe)=>{%>
+    <a href="/recipesDatails/<%=recipe._id%>" class="latest_recipe_link">
+        <div class="latest_recipe_img">
+            <img src="/imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+        </div>
+        <div class="latest_recipe_name"><%=recipe.name%></div>
+    </a>
+    <%})%>
+    <%} else{%>
+        <h2>there are some error</h2>
+    <%}%>
+
+</div>

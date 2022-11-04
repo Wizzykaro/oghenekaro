@@ -1,0 +1,17 @@
+<h1>All Categories</h1>
+<div class="latest_recipe">
+
+    <%if(categories.length > 0){%>
+    <% categories.forEach((category)=>{%>
+    <a href="/recipes/<%=category.name%>" class="latest_recipe_link">
+        <div class="latest_recipe_img">
+            <img src="imgs/<%=category.image%>" alt="<%=category.name%>">
+        </div>
+        <div class="latest_recipe_name"><%=category.name%></div>
+    </a>
+    <%})%>
+    <%} else{%>
+        <h2>there are some error</h2>
+    <%}%>
+
+</div>

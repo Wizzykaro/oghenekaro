@@ -1,0 +1,17 @@
+<h1>All Recipe</h1>
+<div class="latest_recipe">
+
+    <%if(searcHRecipeCol.length > 0){%>
+    <% searcHRecipeCol.forEach((recipe)=>{%>
+    <a href="/recipeDetails/<%=recipe._id%>" class="latest_recipe_link">
+        <div class="latest_recipe_img">
+            <img src="/imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>>">
+        </div>
+        <div class="latest_recipe_name"><%=recipe.name%></div>
+    </a>
+    <%})%>
+    <%} else{%>
+        <h2>there are no categories</h2>
+    <%}%>
+
+</div>
